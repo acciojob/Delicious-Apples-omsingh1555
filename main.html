@@ -19,16 +19,23 @@
       justify-content: center;
     }
 
-    .product__photo {
+    .product {
       background: #fff;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      max-width: 900px;
+      max-width: 1000px;
       overflow: hidden;
       display: flex;
       flex-direction: row;
       gap: 30px;
       padding: 20px;
+    }
+
+    .product__photo {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      gap: 30px;
     }
 
     .photo-container {
@@ -82,14 +89,20 @@
       font-size: 1.2rem;
     }
 
-    .variant a {
-      margin-right: 10px;
-      padding: 8px 16px;
-      background-color: #d8e2dc;
-      color: #000;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .variant ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .variant li img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
     }
 
     .description {
@@ -123,44 +136,48 @@
 </head>
 <body>
 
-<div class="product__photo">
-  <div class="photo-container">
-    <div class="photo-main">
-      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Red Apple">
-    </div>
-    <div class="photo-album">
-      <ul>
-        <li><img src="https://images.unsplash.com/photo-1576871337632-6c9c9d0f0ee9" alt="Red Apple Side"></li>
-        <li><img src="https://images.unsplash.com/photo-1589927986089-35812388d1c3" alt="Red Apple Close-up"></li>
-        <li><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Red Apple Top"></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="details">
-    <div>
-      <div class="price">$7.93</div>
-
-      <div class="variant">
-        <h3>Varieties</h3>
-        <a href="#">Green</a>
-        <a href="#">Yellow</a>
-        <a href="#">Orange</a>
-        <a href="#">Red</a>
+<div class="product">
+  <div class="product__photo">
+    <div class="photo-container">
+      <div class="photo-main">
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Red Apple">
       </div>
-
-      <div class="description">
-        <h3>BENEFITS</h3>
+      <div class="photo-album">
         <ul>
-          <li>Rich in dietary fiber</li>
-          <li>Boosts heart health</li>
-          <li>Supports immune system</li>
-          <li>Natural source of antioxidants</li>
+          <li><img src="https://images.unsplash.com/photo-1576871337632-6c9c9d0f0ee9" alt="Red Apple Side"></li>
+          <li><img src="https://images.unsplash.com/photo-1589927986089-35812388d1c3" alt="Red Apple Close-up"></li>
+          <li><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Red Apple Top"></li>
         </ul>
       </div>
     </div>
 
-    <button class="add-to-cart">ADD TO CART</button>
+    <div class="details">
+      <div>
+        <div class="price">$7.93</div>
+
+        <div class="variant">
+          <h3>Varieties</h3>
+          <ul>
+            <li><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Green Apple"></li>
+            <li><img src="https://images.unsplash.com/photo-1608219959200-bd04f65fd692" alt="Yellow Apple"></li>
+            <li><img src="https://images.unsplash.com/photo-1605026696495-09fdde8fcafd" alt="Orange Apple"></li>
+            <li><img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Red Apple"></li>
+          </ul>
+        </div>
+
+        <div class="description">
+          <h3>BENEFITS</h3>
+          <ul>
+            <li>Rich in dietary fiber</li>
+            <li>Boosts heart health</li>
+            <li>Supports immune system</li>
+            <li>Natural source of antioxidants</li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="add-to-cart">ADD TO CART</button>
+    </div>
   </div>
 </div>
 
